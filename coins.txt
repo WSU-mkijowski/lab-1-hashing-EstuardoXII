@@ -1,7 +1,3 @@
-## Forbidden coins from examples, delete ALL lines of this file and replace 
-## with your coin / coins as below (one coin per line, 
-## do NOT begin lines with #).
-#
-# 54Australian
-# 101Accenture
-
+0463these
+8542these
+1792are
