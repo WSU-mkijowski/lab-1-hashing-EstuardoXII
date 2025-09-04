@@ -9,19 +9,29 @@
 
 Answer the following in this file:
 
-* How many unique users are in the data?
-* How many salts did you create?
+* How many unique users are in the data? 
+  * 42
+* How many salts did you create? 
+  * 42
 * How many possible combinations will I need to try to figure out the secret ID
   of all students (assume I know all potential secret IDs and have your 
-  `salted-data.csv`)
+  `salted-data.csv`) 
+  * The salt is 5 digits long (a total of 100,000 salts), there are 42 unique users, the total combinations possible is 4,200,000.
 * Instead of salts, if you were to use a nonce (unique number for each hashed
-  field) how many possible combinations would I need to try?
+  field) how many possible combinations would I need to try? 
+  * There are 1302 total lines excluding the header, there are a total of 100,000 salts, the total combinations possible is 130,200,000.
 * Given the above, if this quiz data were *actual* class data, say for example
   your final exam, how would you store this dataset?  Why?
+  * If I was storing this dataset, i would still salt the hashes but instead of the salts just having numbers, i would mix in letter or any other character. 
+    Intead of there being 100,000 total salts, it would drastically increase the amount salts that the attacker would have to try.
 
 ```bash
 please put any cool bash one-liners or other piped commands you
 learned/struggled with for task 1 here
+
+tail -n +2 data/quiz_data.csv\
+I was adding an if statement inside my for-loop to check if the line was the header, but instead I could remove it entirely.
+
 ```
 
 ---
