@@ -29,7 +29,7 @@ Answer the following in this file:
 please put any cool bash one-liners or other piped commands you
 learned/struggled with for task 1 here
 
-tail -n +2 data/quiz_data.csv\
+tail -n +2 data/quiz_data.csv
 I was adding an if statement inside my for-loop to check if the line was the header, but instead I could remove it entirely.
 
 ```
@@ -47,19 +47,38 @@ Answer the following:
 hash)
 
 ```
-
+0463these
+8542these
+1792are
+321909these
 ```
 
-* How many words were in your dictionary?
+* How many words were in your dictionary? 
+  * 14
 * How many nonces did your code iterate over?
+  * A total of 10,000 (0000 - 9999).
+  * After trying to get a 5 leading zeros coin, it can do 1,000,000.
 * What was the maximum number of hashes your code *could* compute given the above?
+  * With 10,000 nonces and 14 possible words from the dictionary, a total of 140,000 possible hashes.
+  * After trying to get a 5 leading zeros coin, a total of 14,000,000 possible hashes.
 * What did you think about Task 2?
+  * I enjoyed doing task 2 because there are many ways that this can performed, such as a bigger dictionary,
+    making longer nonces, or have the nonces include letters. Another choice I had to make was either to start randomly 
+    in the dictionary and to either generate a random nonce. I especially enjoyed the bonus challenge, trying to find
+    other ways to improve efficiency, although not successful, i just increased the length and range of the nonce.
 * Is there a better way than brute force to attempt to get higher valued coins?
 * Why or why not?
+    * Finding another method besides generating nonces and combining them with dictionary words, there is no shortcut to find more zeros in a hash, brute
+      brute force is the only way. Checking all the possible hashes is the most efficient method. What can be improved is efficiency, making the code 
+      more efficient or getting hardware that's capable of more.
 
 
 ```bash
 please put any cool bash one-liners or other piped commands you
 learned/struggled with for task 2 here
+
+$hash_coin == ${required_zeros}*
+I struggled to check if the hash started with the required amount of zero's, I had to find how to do it
+https://java2blog.com/check-if-string-starts-with-another-string-bash/
 ```
 

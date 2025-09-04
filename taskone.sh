@@ -4,7 +4,7 @@
 list=($(tail -n +2 data/quiz_data.csv | awk -F ',' '{ print $1 }' | sort -u))
 
 for i in "${!list[@]}"; do
-  # generate a random 5 digit salt
+  # generate a 5 digit salt
   salt=$(printf "%05d" $((RANDOM % 100000)))
 
   # append the salt to the username and perform a sha256sum
