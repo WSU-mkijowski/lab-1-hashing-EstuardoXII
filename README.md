@@ -10,9 +10,10 @@
 Answer the following in this file:
 
 * How many unique users are in the data? 
-  * 42
+  * There are a total of 42 unique users
+  * `cat data/quiz_data.csv | awk -F "," '{print $1}' | uniq | wc -l` output is 43, 42 excluding the header.
 * How many salts did you create? 
-  * 42
+  * My code created 42 salts, one per unique user.
 * How many possible combinations will I need to try to figure out the secret ID
   of all students (assume I know all potential secret IDs and have your 
   `salted-data.csv`) 
@@ -30,7 +31,7 @@ please put any cool bash one-liners or other piped commands you
 learned/struggled with for task 1 here
 
 tail -n +2 data/quiz_data.csv
-I was adding an if statement inside my for-loop to check if the line was the header, but instead I could remove it entirely.
+"I added an if statement inside my for-loop for 'taskone.sh' to check if the line was the header, but instead I could remove it entirely using 'tail'."
 
 ```
 
@@ -47,17 +48,21 @@ Answer the following:
 hash)
 
 ```
+Three leading zero's.
 0463these
 8542these
 1792are
+
+Five leading zero's
 321909these
 ```
 
 * How many words were in your dictionary? 
-  * 14
+  * There are 14 words inside the provided dictionary.
+  * ` cat data/dictionary | wc -l` output is 14.
 * How many nonces did your code iterate over?
   * A total of 10,000 (0000 - 9999).
-  * After trying to get a 5 leading zeros coin, it can do 1,000,000.
+  * After trying to get a 5 leading zeros coin, it can do 1,000,000 (000000 - 999999).
 * What was the maximum number of hashes your code *could* compute given the above?
   * With 10,000 nonces and 14 possible words from the dictionary, a total of 140,000 possible hashes.
   * After trying to get a 5 leading zeros coin, a total of 14,000,000 possible hashes.
@@ -78,7 +83,8 @@ please put any cool bash one-liners or other piped commands you
 learned/struggled with for task 2 here
 
 $hash_coin == ${required_zeros}*
-I struggled to check if the hash started with the required amount of zero's, I had to find how to do it
+"I struggled to check if the hash started with the required amount of zero's, I had to find how to do it"
+
 https://java2blog.com/check-if-string-starts-with-another-string-bash/
 ```
 
