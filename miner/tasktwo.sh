@@ -15,8 +15,9 @@ while IFS= read -r word; do
     # perform a sha256sum on salt+word
     hash_coin=$(printf "%s" $nonce_coin | sha256sum | awk '{print $1}')
 
-    # check if the hash of the potential coin starts with the required zeros, if yes append to coins.txt
+    # check if the hash of the potential coin starts with the required zeros
     if [[ $hash_coin == ${required_zeros}* ]]; then
+      # append the coin to coins file as a string and add a new line
       printf "%s\n" "$nonce_coin" >> "$coins_file"
     fi
 
