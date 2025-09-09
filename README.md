@@ -49,12 +49,12 @@ hash)
 
 ```
 Three leading zero's.
-0463these
-8542these
-1792are
+0463these - 000f23b4be0d41414167f065731f837782c5bdc86b686a504d525a45479bc4df
+8542these - 0001a6475b0dc6f7ddc15f69d7555887bfcdf7db237a708028cfec56a578fc5c
+1792are - 000ac13d8480c8644dbb50d329cfa8918be92a6b37951a36b6665dcb95713c92
 
 Five leading zero's
-321909these
+321909these - 00000a1a28fc165e4d058deb815feb7670a5651ad42a0a5f55107cc7bee83eef
 ```
 
 * How many words were in your dictionary? 
